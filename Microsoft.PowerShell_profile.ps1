@@ -61,12 +61,15 @@ function ShortPwd{
     $shortPwd = ""
     $splitPath = (Get-Location).ToString().Split('\')
     $shortPwd = $splitPath[0] + '\'
-    $splitPath[1..($splitPath.Length-2)] | ForEach-Object {
-        $shortPwd += $_[0] + '\'
+    If ($splitPath.Length -gt 2) {
+        $splitPath[1..($splitPath.Length-2)] | ForEach-Object {
+            $shortPwd += $_[0] + '\'
+        }
     }
     $shortPwd += $splitPath[-1]
 return $shortPwd
 }
+
 
 function prompt {
     $promptColor = "Cyan"
