@@ -8,4 +8,5 @@ The following command creates a new file in `$Profile$`
 ## Modifying the profile
 The profile can be edited with your favorite text editor (`code`): `code $Profile`
 
+## Demo
 ![Demo image](/images/demo.png)
